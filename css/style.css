@@ -3,6 +3,38 @@
     margin: 0;
     box-sizing: border-box;
 }
+/* header  */
+.header{
+    color:white;
+    background-color:#232F3E;
+    padding:20px;
+} 
 .text{
     text-align: center;
 }
+/* card body */
+.main{
+    background-color:#EAEDED;
+}
+.card{
+    padding:30px;
+}
+.col{
+    padding:20px;
+}
+.main-img{
+    width:80%;
+    height:auto;
+}
+
+.card-details{
+    padding:10px;
+}
+.image-details{
+    width:80%;
+    height:31.25rem;
+}
+.card-body{
+    padding:30px;
+}
+/* card body end */
