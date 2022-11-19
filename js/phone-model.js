@@ -2,6 +2,9 @@
 const searchPhone = () => {
   const searchField = document.getElementById("search-field");
   const searchText = searchField.value;
+  if(searchText == '') {
+    alert("Please enter a search by phone name");
+  }
   searchField.value = "";
   const url = `https://openapi.programming-hero.com/api/phones?search=${searchText}`;
   fetch(url)
@@ -52,8 +55,8 @@ const displayPhoneDetails = (phone) => {
   <div class="card-details mx-auto">
   <img class="image-details" src="${phone.image}">
   <div class="card-body">
-  <h5 class="card-title">Release Date: ${phone.releaseDate}</h5>
-  <p class="card-text">ChepSet: ${phone.mainFeatures.chipSet}</p>
+  <h5 class="card-title">Release Date: ${phone.releaseDate ? phone.releaseDate : 'not found releaseDate'}</h5>
+  <p class="card-text">ChipSet: ${phone.mainFeatures.chipSet}</p>
   <p class="card-text">Display: ${phone.mainFeatures.displaySize}</p>
   <p class="card-text">Memory: ${phone.mainFeatures.memory}</p>
   <p class="card-text">Storage: ${phone.mainFeatures.storage}</p>
@@ -74,20 +77,3 @@ const displayPhoneDetails = (phone) => {
   `;
   phoneDetails.appendChild(div);
 };
-
-// const displayPhoneDetails = (phone) => {
-//   console.log(phone);
-//   const phoneDetails = document.getElementById('phone-details');
-//   const div = document.createElement('div');
-//   div.classList.add('card');
-//   div.innerHTML = `
-//   <div class="card">
-//   <img src="${phone.image}" class="card-img-top" alt="...">
-//   <div class="card-body">
-//     <h5 class="card-title">${phone.releaseDate}</h5>
-//     <p class="card-text">${phone.mainFeatures.chipSet}</p>
-//   </div>
-//   </div>
-//   `
-//   phoneDetails.appendChild(div);
-// }
