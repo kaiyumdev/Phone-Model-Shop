@@ -43,7 +43,7 @@ const loadPhoneDetail = (phoneId) => {
     .then((data) => displayPhoneDetails(data.data));
 };
 
-// show phone details
+// show single phone details
 const displayPhoneDetails = (phone) => {
   console.log(phone);
   const phoneDetails = document.getElementById("phone-details");
@@ -73,7 +73,6 @@ const displayPhoneDetails = (phone) => {
   <p class="card-text">USB: ${phone.others.USB}</p>
   </div>
   </div>
-  
   `;
   phoneDetails.appendChild(div);
 };
