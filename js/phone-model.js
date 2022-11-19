@@ -11,7 +11,7 @@ const searchPhone = () => {
     .then((res) => res.json())
     .then((data) => displaySearch(data.data.slice(0, 20)));
 };
-// search show image
+// search show image field
 const displaySearch = (phones) => {
   const searchResult = document.getElementById("search-result");
   searchResult.textContent = "";
@@ -33,7 +33,7 @@ const displaySearch = (phones) => {
   });
 };
 
-// show phone image
+// show phoneDetails image 
 const loadPhoneDetail = (phoneId) => {
   console.log(phoneId);
   const url = `https://openapi.programming-hero.com/api/phone/${phoneId}`;
