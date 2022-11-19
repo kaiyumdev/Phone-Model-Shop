@@ -1,4 +1,4 @@
-// searchField
+// Phone Search Field
 const searchPhone = () => {
   const searchField = document.getElementById("search-field");
   const searchText = searchField.value;
